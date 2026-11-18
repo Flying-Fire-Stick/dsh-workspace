@@ -1,6 +1,6 @@
 # AI 视频提示词库（AI Video Prompt Library）
 
-一套可直接套用的 AI 视频生成提示词工程模板，覆盖**文生视频（Text-to-Video）**与**图生视频（Image-to-Video）**，中文为主、附英文原句，适配 Sora、Veo、Runway、可灵（Kling）、即梦（Jimeng）、Pika、Luma、通义万相 Wan 等主流模型。
+一套可直接套用的 AI 视频生成提示词工程模板，覆盖**文生视频（Text-to-Video）**与**图生视频（Image-to-Video）**，中文为主、附英文原句，适配 Seedance 2.5、Sora、Veo、Runway、可灵（Kling）、即梦（Jimeng）、Pika、Luma、通义万相 Wan 等主流模型；内置 **AI 漫剧**专题（角色一致性、分镜节奏、Seedance 提示词）。
 
 ## 项目结构
 
@@ -11,15 +11,19 @@ ai-video-prompts/
 │   ├── prompt-structure.md         # 提示词公式、模块拆解、常见错误
 │   ├── camera-movement.md          # 运镜中英词典（20+ 种）
 │   ├── lighting-color.md           # 光线、色彩、质感关键词
-│   └── model-guide.md              # 各模型差异与适配建议
+│   ├── model-guide.md              # 各模型差异与适配建议
+│   ├── comic-drama-workflow.md     # AI 漫剧制作流程
+│   └── seedance-2-5-guide.md       # Seedance 2.5 提示词指南
 ├── prompts/
 │   ├── 01-portrait-narrative.md    # 人像与叙事
 │   ├── 02-nature-landscape.md      # 自然与风景
 │   ├── 03-product-ad.md            # 产品与广告
 │   ├── 04-scifi-vfx.md             # 科幻与视效
-│   └── 05-animation-style.md       # 动画与风格化
+│   ├── 05-animation-style.md       # 动画与风格化
+│   └── 06-comic-drama-seedance.md  # AI 漫剧（Seedance 2.5）
 └── templates/
     ├── prompt-template.md          # 可直接复制的空白模板
+    ├── shot-list-template.md       # 漫剧分镜表模板
     └── prompt.schema.json          # 结构化提示词的 JSON Schema
 ```
 
@@ -39,6 +43,15 @@ ai-video-prompts/
 
 详细拆解见 [docs/prompt-structure.md](docs/prompt-structure.md)。
 
+## 漫剧专题（Seedance 2.5）
+
+面向竖屏 AI 漫剧的工业化提示词与制作流程：
+
+- [docs/comic-drama-workflow.md](docs/comic-drama-workflow.md)：角色一致性、分镜节奏、生成策略；
+- [docs/seedance-2-5-guide.md](docs/seedance-2-5-guide.md)：Seedance 2.5 能力速览、提示词结构、口型与时间戳技巧；
+- [prompts/06-comic-drama-seedance.md](prompts/06-comic-drama-seedance.md)：20 条漫剧场景提示词（雨夜回眸、怒视对峙、觉醒变身、结尾钩子等）；
+- [templates/shot-list-template.md](templates/shot-list-template.md)：分镜表模板与审片检查表。
+
 ## 核心原则
 
 - **一个镜头只写一个核心动作**，多动作 / 多场景切换会让模型输出混乱；
@@ -52,6 +65,7 @@ ai-video-prompts/
 
 | 模型 | 提示词偏好 | 中文支持 | 备注 |
 |---|---|---|---|
+| Seedance 2.5（字节） | 自然语言 + 分镜/时间戳结构 | 强 | 30s 原生音视频、多镜头叙事、多模态参考 |
 | Sora 2 | 自然语言长句、可剧本化 | 一般 | 物理一致性强，部分版本带音频 |
 | Veo 3.x | 叙事长句 + 声音描述 | 一般 | 原生音频、镜头语言强 |
 | Runway Gen-4 | 短句 + 关键词 + 参考图 | 弱 | 图生视频、运镜控制是强项 |

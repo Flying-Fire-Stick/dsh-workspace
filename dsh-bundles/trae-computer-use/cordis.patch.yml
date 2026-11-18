@@ -1,0 +1,14 @@
+- insert:
+    - id: trae-computer-use-mcp
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: trae
+        transport: stdio
+        command: !!js process.env.ComSpec
+        args:
+          - /d
+          - /c
+          - !!js '(process.env.DSH_PROFILE_DIR || (process.env.USERPROFILE + "\\.dsh\\profiles\\desktop")) + "\\node_modules\\@local\\trae-computer-use-mcp\\launch.cmd"'
+        failOnStartupError: true
+        startupTimeoutMs: 20000
+        toolCallTimeoutMs: 120000

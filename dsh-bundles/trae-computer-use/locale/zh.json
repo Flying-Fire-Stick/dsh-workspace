@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Trae 桌面操作",
+    "description": "接入本机 Trae CN 内置的 computer-use MCP 服务，提供截图、鼠标键盘输入、窗口管理、应用启动与录制步骤回放等工具。",
+    "detail": "docs/DETAIL.md"
+  }
+}

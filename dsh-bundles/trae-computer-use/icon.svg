@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="Trae desktop control">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f2a44"/>
+      <stop offset="1" stop-color="#0e1526"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4d7cfe"/>
+      <stop offset="1" stop-color="#2b4bd8"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="26" fill="url(#bg)"/>
+  <rect x="26" y="34" width="76" height="50" rx="8" fill="url(#screen)"/>
+  <rect x="26" y="34" width="76" height="50" rx="8" fill="none" stroke="#8fb0ff" stroke-opacity="0.55" stroke-width="2"/>
+  <rect x="38" y="46" width="30" height="6" rx="3" fill="#dbe6ff"/>
+  <rect x="38" y="58" width="44" height="6" rx="3" fill="#b9ccff" fill-opacity="0.75"/>
+  <rect x="48" y="84" width="32" height="6" rx="3" fill="#8fb0ff"/>
+  <path d="M74 66 L98 90 L86 91 L92 104 L84 108 L78 95 L69 102 Z" fill="#ffffff" stroke="#0e1526" stroke-width="2.5" stroke-linejoin="round"/>
+</svg>

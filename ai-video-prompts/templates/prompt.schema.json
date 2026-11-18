@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/ai-video-prompts/prompt.schema.json",
+  "title": "AI Video Prompt",
+  "description": "A single structured prompt entry for AI video generation.",
+  "type": "object",
+  "required": ["title", "prompt_zh"],
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Prompt title, e.g. 咖啡馆窗边"
+    },
+    "models": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Recommended models, e.g. [\"Sora\", \"可灵\"]"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "portrait-narrative",
+        "nature-landscape",
+        "product-ad",
+        "scifi-vfx",
+        "animation-style"
+      ]
+    },
+    "aspect_ratio": {
+      "type": "string",
+      "enum": ["16:9", "9:16", "1:1", "4:3", "2.35:1", "21:9"]
+    },
+    "duration_seconds": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 60
+    },
+    "prompt_zh": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Chinese prompt"
+    },
+    "prompt_en": {
+      "type": "string",
+      "description": "English prompt"
+    },
+    "negative_prompt": {
+      "type": "string"
+    },
+    "camera": {
+      "type": "string",
+      "description": "Camera movement, e.g. slow dolly-in"
+    },
+    "lighting": {
+      "type": "string",
+      "description": "Lighting setup, e.g. side-back light, golden hour"
+    },
+    "style": {
+      "type": "string",
+      "description": "Visual style, e.g. cinematic film look"
+    },
+    "motion_strength": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "notes": {
+      "type": "string",
+      "description": "Tips, iteration log, pitfalls"
+    }
+  }
+}

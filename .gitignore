@@ -1,0 +1,26 @@
+# Windows / macOS 系统文件
+Thumbs.db
+Desktop.ini
+desktop.ini
+.DS_Store
+
+# 日志与临时文件
+*.log
+*.tmp
+*.temp
+*.swp
+*~
+
+# 环境变量与密钥
+.env
+.env.*
+!.env.example
+
+# 依赖与缓存
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+dist/
+build/

@@ -24,3 +24,6 @@ __pycache__/
 venv/
 dist/
 build/
+
+# 本地临时工作目录
+_work/
